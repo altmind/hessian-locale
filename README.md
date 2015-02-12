@@ -11,7 +11,7 @@ The following code is in groovy:
 
 ## Serialize ##
 
-<pre>
+```groovy
 ByteArrayOutputStream baos = new ByteArrayOutputStream();
 Hessian2Output out = new Hessian2Output(baos);
 def sf = SerializerFactory.createDefault()
@@ -22,8 +22,11 @@ out.startMessage();
 out.writeObject(entry);
 out.completeMessage();
 out.close();</pre> 
+```
+
 ## Deserialize ##
-<pre>
+
+```groovy
 ByteArrayInputStream bais = new ByteArrayInputStream(byteval);
 Hessian2Input inp = new Hessian2Input(bais);
 def sf = SerializerFactory.createDefault()
@@ -32,7 +35,7 @@ inp.serializerFactory=sf
 inp.startMessage();
 def entry = inp.readObject();
 inp.completeMessage();
-</pre>
+```
 
 # License #
 This work is released under pubic domain license.
