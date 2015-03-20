@@ -38,4 +38,4 @@ inp.completeMessage();
 ```
 
 # License #
-This work is released under pubic domain license.
+This work is released under public domain license.
